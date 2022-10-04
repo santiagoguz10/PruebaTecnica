@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "670dcfe3-94ad-4dfc-86f9-3af16f0b92bf",
+		"name": "roulette",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Roulette",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    ",
+							"    pm.environment.set(\"roulette_id\", jsonData.id);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Postman-Token",
+						"value": "73acec08-416c-472a-8706-f9ff3808dee4"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "user",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/roulette",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"roulette"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Roulette",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Postman-Token",
+						"value": "73acec08-416c-472a-8706-f9ff3808dee4"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "user",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/roulette",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"roulette"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Roulette",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Postman-Token",
+						"value": "73acec08-416c-472a-8706-f9ff3808dee4"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "user",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/roulette/{{roulette_id}}/open",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"roulette",
+						"{{roulette_id}}",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bet roulette",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Postman-Token",
+						"value": "73acec08-416c-472a-8706-f9ff3808dee4"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "user",
+						"value": "1"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "user-id",
+						"value": "109035044",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"position\":5,\n\t\"money\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/roulette/{{roulette_id}}/bet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"roulette",
+						"{{roulette_id}}",
+						"bet"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "10903825",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "close Roulette",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Postman-Token",
+						"value": "73acec08-416c-472a-8706-f9ff3808dee4"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "user",
+						"value": "1"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/roulette/{{roulette_id}}/close",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"roulette",
+						"{{roulette_id}}",
+						"close"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
